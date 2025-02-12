@@ -1,4 +1,4 @@
-# New Gemini SDK
+# New Google GenAI Gemini SDK API Guide
 
 This repository showcases the capabilities of the Gemini AI models using the latest Google Gemini SDK (v1.2.0). It's designed to be an accessible resource for both beginners and experienced developers looking to leverage the power of AI in their projects.
 
@@ -54,7 +54,7 @@ Each example includes a brief description of its purpose and instructions for ru
 The repository is structured as follows:
 
 ```
-New Gemini SDK/
+gemini-api-guide/
   + AI Audio Understanding/
     - Advanced_Music_Analysis.py
     + Audios/
@@ -190,8 +190,8 @@ This section guides you through setting up your environment and running the exam
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YoussefElsafi/genai-sdk-detailed-examples
-    cd genai-sdk-detailed-examples
+    git clone https://github.com/YoussefElsafi/gemini-api-guide
+    cd gemini-api-guide
     ```
     Replace `[repository URL]` with the actual URL of this GitHub repository.
 
@@ -208,7 +208,7 @@ This section guides you through setting up your environment and running the exam
     pip install -r requirements.txt
     ```
     This will install the Google Gemini AI library along with any other dependencies.
-    ***NOTE:*** If the `requirements.txt` doesn't work, make sure to install `google-generai` as v1.2.0
+    ***NOTE:*** If the `requirements.txt` doesn't work, make sure to install `google-genai` as v1.2.0
 
 ### API Key Setup
 
@@ -245,7 +245,7 @@ This directory contains examples for analyzing and transcribing audio files.
 
 1.  Navigate to the `AI Audio Understanding` directory:
     ```bash
-    cd "New Gemini SDK/AI Audio Understanding"
+    cd "gemini-api-guide/AI Audio Understanding"
     ```
 2.  Run the desired Python script:
     ```bash
@@ -269,7 +269,7 @@ This directory showcases how to extract information from various document types.
 
 1.  Navigate to the `AI Document Understanding` directory:
     ```bash
-    cd "New Gemini SDK/AI Document Understanding"
+    cd "gemini-api-guide/AI Document Understanding"
     ```
 2.  Run the desired script:
     ```bash
@@ -293,7 +293,7 @@ This directory provides examples of generating text using different techniques a
 
 1.  Navigate to the `AI Text Generation` directory:
     ```bash
-    cd "New Gemini SDK/AI Text Generation"
+    cd "gemini-api-guide/AI Text Generation"
     ```
 2.  Run the desired script:
     ```bash
@@ -318,7 +318,7 @@ This directory contains examples demonstrating how to analyze images and videos.
 
 1.  Navigate to the `Image Input` directory:
     ```bash
-    cd "New Gemini SDK/AI Vision Analysis/Image Input"
+    cd "gemini-api-guide/AI Vision Analysis/Image Input"
     ```
 2.  Run the desired script:
     ```bash
@@ -335,7 +335,7 @@ This directory contains examples demonstrating how to analyze images and videos.
 
 1.  Navigate to the `Spatial Understanding` directory:
     ```bash
-    cd "New Gemini SDK/AI Vision Analysis/Spatial Understanding"
+    cd "gemini-api-guide/AI Vision Analysis/Spatial Understanding"
     ```
 2.  Run the desired script:
     ```bash
@@ -357,7 +357,7 @@ This directory contains examples demonstrating how to analyze images and videos.
 
 1.  Navigate to the `Video Input` directory:
     ```bash
-    cd "New Gemini SDK/AI Vision Analysis/Video Input"
+    cd "gemini-api-guide/AI Vision Analysis/Video Input"
     ```
 2.  Run the desired script:
     ```bash
@@ -375,7 +375,7 @@ This directory contains an example demonstrating a creative use of Gemini: analy
 
 1.  Navigate to the `Analyze Zip Files` directory:
     ```bash
-    cd "New Gemini SDK/Creative Ideas/Analyze Zip Files"
+    cd "gemini-api-guide/Creative Ideas/Analyze Zip Files"
     ```
 2.  Run the script:
     ```bash
@@ -396,7 +396,7 @@ This directory showcases how to fine-tune Gemini models for specific tasks.
 
 1.  Navigate to the `Fine-Tuning` directory:
     ```bash
-    cd "New Gemini SDK/Fine-Tuning"
+    cd "gemini-api-guide/Fine-Tuning"
     ```
 2.  Run the desired script:
     ```bash
@@ -424,7 +424,7 @@ This directory provides examples of using the Imagen model for text-to-image gen
 
 1.  Navigate to the `Image Generation (Imagen)` directory:
     ```bash
-    cd "New Gemini SDK/Image Generation (Imagen)"
+    cd "gemini-api-guide/Image Generation (Imagen)"
     ```
 2.  Run the script:
     ```bash
@@ -444,7 +444,7 @@ This directory demonstrates how to adjust the safety settings of the Gemini API.
 
 1.  Navigate to the `Safety Settings` directory:
     ```bash
-    cd "New Gemini SDK/Safety Settings"
+    cd "gemini-api-guide/Safety Settings"
     ```
 2.  Run the desired script:
     ```bash
@@ -464,7 +464,7 @@ This directory provides examples of using the code execution tool.
 
 1.  Navigate to the `Code Execution` directory:
     ```bash
-    cd "New Gemini SDK/Tools/Code Execution"
+    cd "gemini-api-guide/Tools/Code Execution"
     ```
 2.  Run the desired script:
     ```bash
@@ -491,7 +491,7 @@ This directory showcases the advanced function calling capabilities of Gemini.
 
 1.  Navigate to the `Function Calling (Advanced)` directory:
     ```bash
-    cd "New Gemini SDK/Tools/Function Calling (Advanced)"
+    cd "gemini-api-guide/Tools/Function Calling (Advanced)"
     ```
 2.  Run the desired script:
     ```bash
@@ -513,7 +513,7 @@ This directory demonstrates how to use the "Grounding with Google Search" featur
 
 1.  Navigate to the `Grounding with Google Search` directory:
     ```bash
-    cd "New Gemini SDK/Tools/Grounding with Google Search"
+    cd "gemini-api-guide/Tools/Grounding with Google Search"
     ```
 2.  Run the desired script:
     ```bash
@@ -536,7 +536,7 @@ This directory demonstrates how to generate structured data, like JSON, for easi
 
 1.  Navigate to the `structured_output` directory:
     ```bash
-    cd "New Gemini SDK/Tools/structured_output"
+    cd "gemini-api-guide/Tools/structured_output"
     ```
 2.  Run the desired script:
     ```bash
