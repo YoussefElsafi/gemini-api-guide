@@ -4,7 +4,7 @@ This repository showcases the capabilities of the Gemini AI models using the lat
 
 **⚠️ Warning: Important Version Requirement** ⚠️
 
-This repository is built using the Google `google-genai` Python library v1.2.0.  It **will not function correctly** with earlier versions of the library.  Please ensure you have the correct version installed:
+This repository is only works with Google `google-genai` Python library v1.2.0 or higher.  It **will not function correctly** with an older version of the library.  Please ensure you have the correct version installed:
 
 ```bash
 pip install -U google-genai==1.2.0
@@ -27,6 +27,7 @@ pip install -U google-genai==1.2.0
     *   [Fine-Tuning](#fine-tuning)
     *   [Gemini 2.0 - Multimodal Live API](#gemini-20---multimodal-live-api)
     *   [Gemini 2.0 - Thinking](#gemini-20---thinking)
+    *   [Image Generation - Gemini 2.0 Native Image Output](#image-generation---gemini-20-native-image-output)
     *   [Image Generation (Imagen)](#image-generation-imagen)
     *   [Safety Settings](#safety-settings)
     *   [Tools - Code Execution](#tools---code-execution)
@@ -46,6 +47,7 @@ This repository provides a collection of Python scripts that demonstrate various
 *   **Vision Analysis:**  Understand images and videos.
 *   **Tools:**  Use specialized functionalities like code execution, function calling, and Google Search integration.
 *   **Fine-Tuning:** Customize Gemini models for specific tasks.
+* **Image Generation:** Generate images using text prompts, including Gemini 2.0's native image output capabilities.
 
 Each example includes a brief description of its purpose and instructions for running it. This repository is aimed at providing code examples for each category, enabling users to build AI powered applications.
 
@@ -119,10 +121,20 @@ gemini-api-guide/
       - Details.md
     + Thinking/
       - Details.md
-  + Image Generation (Imagen)/
-    - Details.md
-    - Guide.md
-    - imagen.py
+  + Image Generation/
+    + Gemini 2.0 Native Image Output/
+      - Details.md
+      - ImageEditing.py
+      - ImageGeneration.py
+      - MultiImageEditing.py
+      + generated_images/
+      + images/
+        - car.jpg
+        - croissant.jpeg
+    + Imagen/
+      - Details.md
+      - Guide.md
+      - imagen.py
   + Safety Settings/
     - Details.md
     - check_blocked_content.py
@@ -249,7 +261,7 @@ This directory contains examples for analyzing and transcribing audio files.
     ```
 2.  Run the desired Python script:
     ```bash
-    python Transcript_Speech.py  # Example
+    python Transcript_Speech.py  
     ```
    Make sure to set your API key.
 
@@ -273,7 +285,7 @@ This directory showcases how to extract information from various document types.
     ```
 2.  Run the desired script:
     ```bash
-    python Access_document_from_url.py # Example
+    python Access_document_from_url.py 
     ```
    Make sure to set your API key.
 
@@ -297,7 +309,7 @@ This directory provides examples of generating text using different techniques a
     ```
 2.  Run the desired script:
     ```bash
-    python text_gen.py  # Example
+    python text_gen.py  
     ```
     Make sure to set your API key.
 
@@ -322,7 +334,7 @@ This directory contains examples demonstrating how to analyze images and videos.
     ```
 2.  Run the desired script:
     ```bash
-    python Local_Image.py  # Example
+    python Local_Image.py  
     ```
     Make sure to set your API key.
 
@@ -339,7 +351,7 @@ This directory contains examples demonstrating how to analyze images and videos.
     ```
 2.  Run the desired script:
     ```bash
-    python ObjectBounding.py  # Example
+    python ObjectBounding.py  
     ```
     Make sure to set your API key.
 
@@ -361,7 +373,7 @@ This directory contains examples demonstrating how to analyze images and videos.
     ```
 2.  Run the desired script:
     ```bash
-    python Summarize_Video.py  # Example
+    python Summarize_Video.py  
     ```
     Make sure to set your API key.
 
@@ -400,7 +412,7 @@ This directory showcases how to fine-tune Gemini models for specific tasks.
     ```
 2.  Run the desired script:
     ```bash
-    python Create_Tuning_Model.py  # Example
+    python Create_Tuning_Model.py  
     ```
     Make sure to set your API key.
 
@@ -411,6 +423,29 @@ This directory showcases how to fine-tune Gemini models for specific tasks.
 ### Gemini 2.0 - Thinking
 
 *   **`Details.md`:** Explains the Gemini 2.0 Flash Thinking model, an experimental model designed to reveal its "thinking process" during response generation.
+
+### Image Generation - Gemini 2.0 Native Image Output
+
+This section demonstrates the native image generation capabilities of Gemini 2.0.  Unlike the separate Imagen model, Gemini 2.0 can directly generate images within its multimodal framework.
+
+*   **`ImageGeneration.py`:** Generates an image from a text prompt using Gemini 2.0's native image output.
+*   **`ImageEditing.py`:** Edits an existing image based on text instructions, demonstrating in-context image manipulation.
+*   **`MultiImageEditing.py`:**  Edits multiple images simultaneously, applying consistent changes based on a single text prompt.
+*   **`images/`:** Contains input images for editing examples (`car.jpg`, `croissant.jpeg`).
+*   **`generated_images/`:**  This directory will store the images generated by the scripts.
+*   **`Details.md`:** Provides a comprehensive guide to using Gemini 2.0 for native image generation, covering prompting techniques, editing capabilities, and limitations.  It contrasts this native functionality with the separate Imagen model.
+
+**To run the examples:**
+
+1.  Navigate to the `Gemini 2.0 Native Image Output` directory:
+    ```bash
+    cd "gemini-api-guide/Image Generation/Gemini 2.0 Native Image Output"
+    ```
+2.  Run the desired script:
+    ```bash
+    python ImageGeneration.py  
+    ```
+    Make sure to set your API key.
 
 ### Image Generation (Imagen)
 
@@ -428,10 +463,9 @@ This directory provides examples of using the Imagen model for text-to-image gen
     ```
 2.  Run the script:
     ```bash
-    python imagen.py  # Example
+    python imagen.py  
     ```
     Make sure to set your API key.
-
 ### Safety Settings
 
 This directory demonstrates how to adjust the safety settings of the Gemini API.
@@ -448,7 +482,7 @@ This directory demonstrates how to adjust the safety settings of the Gemini API.
     ```
 2.  Run the desired script:
     ```bash
-    python set_safety_thresholds.py  # Example
+    python set_safety_thresholds.py  
     ```
     Make sure to set your API key.
 
@@ -468,7 +502,7 @@ This directory provides examples of using the code execution tool.
     ```
 2.  Run the desired script:
     ```bash
-    python code_execution.py  # Example
+    python code_execution.py  
     ```
     Make sure to set your API key.
 
@@ -495,7 +529,7 @@ This directory showcases the advanced function calling capabilities of Gemini.
     ```
 2.  Run the desired script:
     ```bash
-    python Function_Call.py  # Example
+    python Function_Call.py  
     ```
     Make sure to set your API key.
 
@@ -506,7 +540,7 @@ This directory demonstrates how to use the "Grounding with Google Search" featur
 *   **`Dynamic_Grounding_Threshold.py`:** (To be implemented) Set the dynamic retrieval threshold.
 *   **`Grounding.py`:** Enhances the accuracy and reliability of Gemini API responses.
 *   **`Search.py`:** Enables Google Search as a tool the model can invoke itself for.
-*   **Suggestions.md:** The `webSearchQueries` field within the `groundingMetadata`.
+*   **`Suggestions.md`:** The `webSearchQueries` field within the `groundingMetadata`.
 *   **Details.md:** Describes how to use the "Grounding with Google Search" feature within the Gemini API to enhance the accuracy, recency, and reliability of model responses.
 
 **To run the examples:**
@@ -517,7 +551,7 @@ This directory demonstrates how to use the "Grounding with Google Search" featur
     ```
 2.  Run the desired script:
     ```bash
-    python Grounding.py  # Example
+    python Grounding.py  
     ```
     Make sure to set your API key.
 
@@ -540,7 +574,7 @@ This directory demonstrates how to generate structured data, like JSON, for easi
     ```
 2.  Run the desired script:
     ```bash
-    python enum_choice_output.py  # Example
+    python enum_choice_output.py  
     ```
     Make sure to set your API key.
 
