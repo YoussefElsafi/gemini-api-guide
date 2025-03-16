@@ -15,7 +15,7 @@ contents = ('Hi, can you create a 3d rendered image of a pig '
 
 # Generate the image
 response = client.models.generate_content(
-    model="models/gemini-2.0-flash-exp", # The model that supports image generation
+    model="models/gemini-2.0-flash-exp-image-generation", # The model that supports image generation
     contents=contents, # The text prompt for the model
     config=types.GenerateContentConfig( # The configuration for the model
       response_modalities=[ # The response modalities for the model
