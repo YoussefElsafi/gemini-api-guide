@@ -10,7 +10,7 @@ API_KEY = os.environ["API_KEY"]
 client = genai.Client(api_key=API_KEY)
 
 chat_session = client.chats.create(
-  model="models/gemini-2.0-flash-exp", # The model that supports image generation
+  model="models/gemini-2.0-flash-exp-image-generation", # The model that supports image generation
   config=types.GenerateContentConfig( # The configuration for the model
     response_modalities=[ # The response modalities for the model
       'Text', # The text response
