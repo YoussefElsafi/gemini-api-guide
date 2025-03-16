@@ -19,7 +19,7 @@ image = client.files.upload(file=img_path) # Upload the image to gemini
 
 # Generate the image
 response = client.models.generate_content(
-    model="models/gemini-2.0-flash-exp", # The model that supports image generation
+    model="models/gemini-2.0-flash-exp-image-generation", # The model that supports image generation
     contents=[
       image, # The image input to the AI for editing it
       contents # The text prompt for the model
